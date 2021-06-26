@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judge the Food</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       #form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
+      #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
+      #input:focus { outline: none; }
+      #form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+      #header {display: flex; justify-content: center;}
+    </style>
+</head>
+<body>
+    <h1 id="header">What're Ya Lookin' Fer?</h1>
+    <div id="searchBar">
+        <form id="form">
+            <input type="text" placeholder="Go Get..." name="search">
+            <button type="submit">Get It</button>
+        </form>
+    </div>
+    <script src="/yelper/app.js"></script>
+</body>
+</html>

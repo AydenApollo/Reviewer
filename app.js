@@ -3,7 +3,13 @@ var bodyParser = require('body-parser');
 var es6Renderer = require('express-es6-template-engine');
 var session = require('express-session');
 var pgp = require('pg-promise')({ });
-var dbsettings = process.env.DATABASE_URL || {database: 'Reviewer'};
+var dbsettings = process.env.DATABASE_URL;
+if (!dbsettings) {
+  dbsettings = {database: 'Reviewer'}
+} else {
+  dbsettings += '?ssl=require';
+}
+
 var db = pgp(dbsettings);
 var app = express();
 

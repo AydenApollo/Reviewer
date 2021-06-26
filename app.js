@@ -2,6 +2,9 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var es6Renderer = require('express-es6-template-engine');
 var session = require('express-session');
+var pgp = require('pg-promise')({ });
+var dbsettings = process.env.DATABASE_URL || {database: 'Reviewer'};
+var db = pgp(dbsettings);
 var app = express();
 
 app.engine('html', es6Renderer);
@@ -21,6 +24,7 @@ app.get('/', (req, res) => {
 
 
 
-app.listen(8000, () => {
-    console.log('listening on *:8000');
+  var PORT = process.env.PORT || 8000;
+  app.listen(PORT, function () {
+    console.log('Listening on port ' + PORT);
   });

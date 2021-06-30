@@ -8,5 +8,13 @@
 </head>
 <body>
     <div>Results</div>
+    <ul>
+    ${results.map(result => ( 
+         `<li>
+            ${result.name}
+        </li>`
+    )).join('')}
+</ul>
+    ${partial}
 </body>
 </html>

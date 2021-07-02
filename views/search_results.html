@@ -11,7 +11,9 @@
     <ul>
     ${results.map(result => ( 
          `<li>
-            ${result.name}
+            <a href="/restaurant/${result.id}">${result.name}</a>
+            <p>Address:  ${result.address}</p>
+            <p>Category: ${result.category}</p>
         </li>`
     )).join('')}
 </ul>

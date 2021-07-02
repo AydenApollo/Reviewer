@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Review</title>
+</head>
+<body>
+    <ul>
+    ${reviews.map(review => {return( 
+         `<li>
+            <p>${review.title}</p>
+            <p>What They Thought: ${review.review}</p>
+            <p>The Score: ${review.stars}</p>
+            <a href="/restaurant/reviewer/${review.reviewer_id}">Check out reviewer's info</a>
+        </li>`
+    )}).join('')}
+</ul>
+</body>
+</html>

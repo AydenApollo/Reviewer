@@ -10,9 +10,9 @@
     <ul>
     ${reviews.map(review => {return( 
          `<li>
-            <p>${review.title}</p>
-            <p>What They Thought: ${review.review}</p>
-            <p>The Score: ${review.stars}</p>
+            <h1>${review.title}</h1>
+            <h2>What They Thought: ${review.review}</h2>
+            <h3>The Score: ${review.stars}</h3>
             <a href="/restaurant/reviewer/${review.reviewer_id}">Check out reviewer's info</a>
         </li>`
     )}).join('')}
